@@ -2,9 +2,7 @@ import 'package:flutter/rendering.dart';
 import 'package:proje/nav.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:proje/state/status_service.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 
 class Favourite extends StatefulWidget {
   const Favourite({Key? key}) : super(key: key);
@@ -38,7 +36,7 @@ class _FavouriteState extends State<Favourite> {
         ),
       ),
       body: StreamBuilder<QuerySnapshot>(
-          stream: _statusService.getStatus(),
+          stream: _statusService.getFavourite(),
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
               return const Text(
@@ -49,9 +47,41 @@ class _FavouriteState extends State<Favourite> {
                   itemCount: snapshot.data?.docs.length,
                   itemBuilder: (context, index) {
                     DocumentSnapshot mypost = snapshot.data!.docs[index];
+                    Future<void> _showChoiseDialog(BuildContext) {
+                      return showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: Text("silmek istediğinize emin misiniz?"),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
+                              content: Container(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    InkWell(
+                                      onTap: () => _statusService
+                                          .removeStatus(mypost.id)
+                                          .then((value) =>
+                                              Navigator.pop(context)),
+                                      child: const Text("EVET   /"),
+                                    ),
+                                    InkWell(
+                                      onTap: () => Navigator.pop(context),
+                                      child: const Text("   HAYIR"),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          });
+                    }
+
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: InkWell(
+                        onTap: () => _showChoiseDialog(context),
                         child: Container(
                           height: 230,
                           decoration: BoxDecoration(

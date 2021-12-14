@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:proje/home_screen.dart';
 import 'package:proje/nav.dart';
 
 class Dairy extends StatelessWidget {
@@ -19,16 +18,16 @@ class Dairy extends StatelessWidget {
             ),
             elevation: 2.0,
             fillColor: Colors.green,
-            child: Icon(Icons.keyboard_arrow_left),
-            padding: EdgeInsets.all(10.0),
-            shape: CircleBorder(),
+            child: const Icon(Icons.keyboard_arrow_left),
+            padding: const EdgeInsets.all(10.0),
+            shape: const CircleBorder(),
           ),
         ),
       ),
       body: SingleChildScrollView(
         child: Container(
           //  padding: new EdgeInsets.symmetric(vertical: 6.0, horizontal: 6.0),
-          margin: EdgeInsets.symmetric(vertical: 6.0),
+          margin: const EdgeInsets.symmetric(vertical: 6.0),
           child: Column(
             children: <Widget>[
               Column(

@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:proje/cart_screen.dart';
-import 'package:proje/favourite_screen.dart';
 import 'package:proje/product_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:proje/search_screen.dart';
@@ -224,7 +223,7 @@ class Home extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 230,
+                          height: 250,
                           width: 180,
                           //color: Colors.black,
                           child: Center(
@@ -235,8 +234,7 @@ class Home extends StatelessWidget {
                                       left: 2.0, right: 2.0, top: 5.0),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 0, left: 110.0, right: 5.0),
+                                  padding: const EdgeInsets.only(top: 0),
                                   child: FlatButton(
                                     child: Row(
                                       children: [Icon(Icons.favorite_border)],
@@ -247,9 +245,21 @@ class Home extends StatelessWidget {
                                       CollectionReference favouriteRef =
                                           FirebaseFirestore.instance
                                               .collection('favourite');
-                                      favouriteRef.add(
-                                          {'name': 'Orange', 'price': '3.99'});
+                                      favouriteRef.add({
+                                        'name': 'Orange',
+                                        'price': '3.99',
+                                        'image':
+                                            'https://firebasestorage.googleapis.com/v0/b/mobil-projem.appspot.com/o/image%2Forange.jpg?alt=media&token=df00e6d4-a51a-4768-828a-bece075e3806'
+                                      });
                                     },
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 0, bottom: 3.0),
+                                  child: Image(
+                                    image: NetworkImage(
+                                        'https://sc04.alicdn.com/kf/Ub90f0466628744e2b429bbfc4a10753e6.jpg'),
+                                    width: 110,
                                   ),
                                 ),
                                 const Text(
@@ -264,7 +274,7 @@ class Home extends StatelessWidget {
                                   "Weight 1 kilogram",
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 10,
+                                    fontSize: 13,
                                   ),
                                 ),
                                 Padding(
@@ -337,122 +347,118 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 25.0, top: 30.0, bottom: 20.0, right: 10.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.black,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 25.0, top: 30.0, bottom: 20.0, right: 10.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      height: 250,
+                      width: 180,
+                      child: Center(
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 0),
+                              child: FlatButton(
+                                child: Row(
+                                  children: [Icon(Icons.favorite_border)],
+                                ),
+                                onPressed: () {
+                                  FirebaseFirestore firestore =
+                                      FirebaseFirestore.instance;
+                                  CollectionReference favouriteRef =
+                                      FirebaseFirestore.instance
+                                          .collection('favourite');
+                                  favouriteRef.add({
+                                    'name': 'Nutella',
+                                    'price': '5.99',
+                                    'image':
+                                        'https://firebasestorage.googleapis.com/v0/b/mobil-projem.appspot.com/o/image%2Fnutella.jpg?alt=media&token=3a728cf6-ad25-451a-bc1a-6d77990fee30'
+                                  });
+                                },
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                          height: 230,
-                          width: 180,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 2.0, right: 2.0, top: 5.0),
-                                  /* child: Image(
-                                    image: NetworkImage(
-                                        'https://cdn.cimri.io/market/260x260/nutella-500-gr-kakaolu-findik-kremasi-_312770.jpg'),
-                                    width: 100,
-                                  ),*/
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 0, left: 110.0, right: 5.0),
-                                  child: FlatButton(
-                                    child: Row(
-                                      children: [Icon(Icons.favorite_border)],
-                                    ),
-                                    onPressed: () {
-                                      FirebaseFirestore firestore =
-                                          FirebaseFirestore.instance;
-                                      CollectionReference favouriteRef =
-                                          FirebaseFirestore.instance
-                                              .collection('favourite');
-                                      favouriteRef.add(
-                                          {'name': 'Nutella', 'price': '5.99'});
-                                    },
+                            const Padding(
+                              padding: EdgeInsets.only(top: 0, bottom: 3.0),
+                              child: Image(
+                                image: NetworkImage(
+                                    'https://cdn.cimri.io/market/260x260/nutella-500-gr-kakaolu-findik-kremasi-_312770.jpg'),
+                                width: 95,
+                              ),
+                            ),
+                            const Text(
+                              "Nutella",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                fontSize: 20,
+                              ),
+                            ),
+                            Text(
+                              "Weight 500 gram",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 13,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 5.0, left: 8.0, right: 8.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.green,
                                   ),
+                                  borderRadius: BorderRadius.circular(15.0),
                                 ),
-                                Text(
-                                  "Nutella",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                Text(
-                                  "Weight 500 gram",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 5.0, left: 8.0, right: 8.0),
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Colors.green,
-                                      ),
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                    child: FlatButton(
-                                      child: Row(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                top: 3.0,
-                                                bottom: 3.0,
-                                                right: 5.0),
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                border: Border.all(
-                                                  color: Colors.green,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(20.0),
-                                              ),
-                                              child: Text(
-                                                "+",
-                                                style: TextStyle(
-                                                  fontSize: 35.0,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
+                                child: FlatButton(
+                                  child: Row(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 3.0, bottom: 3.0, right: 5.0),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color: Colors.green,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(20.0),
+                                          ),
+                                          child: Text(
+                                            "+",
+                                            style: TextStyle(
+                                              fontSize: 35.0,
+                                              color: Colors.black,
                                             ),
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 8.0),
-                                            child: Text(
-                                              "5.99€",
-                                              style: TextStyle(
-                                                  fontSize: 30.0,
-                                                  color: Colors.black),
-                                            ),
-                                          ),
-                                        ],
+                                        ),
                                       ),
-                                      onPressed: () {},
-                                    ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 8.0),
+                                        child: Text(
+                                          "5.99€",
+                                          style: TextStyle(
+                                              fontSize: 30.0,
+                                              color: Colors.black),
+                                        ),
+                                      ),
+                                    ],
                                   ),
+                                  onPressed: () {},
                                 ),
-                              ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
                       ),
-                    ],
+                    ),
                   )
                 ],
               ),
@@ -471,23 +477,17 @@ class Home extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 230,
+                          height: 250,
                           width: 180,
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 5.0),
-                                  /* child: Image(
-                                    image: NetworkImage(
-                                        'https://www.themarmarahotels.com/Resources/ChocolateShop/ImageFile2/chocolate_m.jpg'),
-                                    width: 80,
-                                  ),*/
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 0, left: 110.0, right: 5.0),
+                                  padding: const EdgeInsets.only(top: 0),
                                   child: FlatButton(
                                     child: Row(
                                       children: [Icon(Icons.favorite_border)],
@@ -500,12 +500,22 @@ class Home extends StatelessWidget {
                                               .collection('favourite');
                                       favouriteRef.add({
                                         'name': 'Chocolate',
-                                        'price': '5.99'
+                                        'price': '5.99',
+                                        'image':
+                                            'https://firebasestorage.googleapis.com/v0/b/mobil-projem.appspot.com/o/image%2Fchocolate.jpg?alt=media&token=01a5abc0-3999-49c6-b931-7ec38953b2f3',
                                       });
                                     },
                                   ),
                                 ),
-                                Text(
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 0, bottom: 3.0),
+                                  child: Image(
+                                    image: NetworkImage(
+                                        'https://www.greenqueen.com.hk/wp-content/uploads/2021/07/Lab-Grown-Chocolate-Could-Be-The-Future-of-Sustainable-Confectionery.jpg'),
+                                    width: 115,
+                                  ),
+                                ),
+                                const Text(
                                   "chocolate",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -513,11 +523,11 @@ class Home extends StatelessWidget {
                                     fontSize: 20,
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 100 gram",
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 10,
+                                    fontSize: 13,
                                   ),
                                 ),
                                 Padding(
@@ -586,7 +596,7 @@ class Home extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 230,
+                          height: 250,
                           width: 180,
                           child: Center(
                             child: Column(
@@ -594,15 +604,9 @@ class Home extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 6.0),
-                                  /*child: Image(
-                                    image: NetworkImage(
-                                        'https://wwwi.globalpiyasa.com/lib/Urun/670/af0e3fb03a2ea9ee169352bc35efb933_1.jpg'),
-                                    width: 100,
-                                  ),*/
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 0, left: 110.0, right: 5.0),
+                                  padding: const EdgeInsets.only(top: 0),
                                   child: FlatButton(
                                     child: Row(
                                       children: [Icon(Icons.favorite_border)],
@@ -615,9 +619,20 @@ class Home extends StatelessWidget {
                                               .collection('favourite');
                                       favouriteRef.add({
                                         'name': 'Pineapple',
-                                        'price': '5.99'
+                                        'price': '5.99',
+                                        'image':
+                                            'https://firebasestorage.googleapis.com/v0/b/mobil-projem.appspot.com/o/image%2Fpineapple.jpg?alt=media&token=2c2b2c33-41b5-4972-a694-235a9dea08e9',
                                       });
                                     },
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 0, bottom: 3.0),
+                                  child: Image(
+                                    image: NetworkImage(
+                                        'https://wwwi.globalpiyasa.com/lib/Urun/670/af0e3fb03a2ea9ee169352bc35efb933_1.jpg'),
+                                    width: 105,
                                   ),
                                 ),
                                 Padding(
@@ -635,7 +650,7 @@ class Home extends StatelessWidget {
                                   "Weight 900 gram",
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 10,
+                                    fontSize: 13,
                                   ),
                                 ),
                                 Padding(

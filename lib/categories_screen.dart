@@ -114,7 +114,7 @@ class Categories extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 230,
+                          height: 190,
                           width: 180,
                           //color: Colors.black,
                           child: Center(
@@ -122,11 +122,11 @@ class Categories extends StatelessWidget {
                               children: [
                                 const Padding(
                                   padding: EdgeInsets.only(top: 20.0),
-                                  /* child: Image(
+                                  child: Image(
                                     image: NetworkImage(
                                         'https://www.bestfreshfruits.com/wp-content/uploads/2015/09/frutas_7.png'),
                                     width: 100,
-                                  ),*/
+                                  ),
                                 ),
                                 InkWell(
                                   onTap: () => Navigator.push(
@@ -167,7 +167,7 @@ class Categories extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 230,
+                          height: 190,
                           width: 180,
                           // color: Colors.black,
                           child: Center(
@@ -176,11 +176,11 @@ class Categories extends StatelessWidget {
                                 const Padding(
                                   padding: EdgeInsets.only(
                                       top: 20.0, left: 20.0, right: 20.0),
-                                  /* child: Image(
+                                  child: Image(
                                     image: NetworkImage(
                                         'https://media.mehrnews.com/d/2020/02/04/4/3371550.jpg'),
                                     width: 150,
-                                  ),*/
+                                  ),
                                 ),
                                 InkWell(
                                   onTap: () => Navigator.push(
@@ -243,7 +243,7 @@ class Categories extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 230,
+                          height: 190,
                           width: 180,
                           //color: Colors.black,
                           child: Center(
@@ -251,11 +251,11 @@ class Categories extends StatelessWidget {
                               children: [
                                 const Padding(
                                   padding: EdgeInsets.only(top: 30.0),
-                                  /*child: Image(
+                                  child: Image(
                                     image: NetworkImage(
                                         'https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/29/16/vegetarian-cookbooks.jpg?width=982&height=726&auto=webp&quality=75'),
                                     width: 100,
-                                  ),*/
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(10.0),
@@ -289,7 +289,7 @@ class Categories extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 230,
+                          height: 190,
                           width: 180,
                           // color: Colors.black,
                           child: Center(
@@ -298,11 +298,11 @@ class Categories extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(
                                       top: 20, left: 2.0, right: 2.0),
-                                  /* child: Image(
+                                  child: Image(
                                     image: NetworkImage(
                                         'https://st2.depositphotos.com/1001069/12106/i/600/depositphotos_121063832-stock-photo-sausages-fish-and-meat-cooking.jpg'),
                                     width: 120,
-                                  ),*/
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(10.0),
