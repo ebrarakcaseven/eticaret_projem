@@ -207,13 +207,12 @@ class Home extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 10.0, top: 30.0, bottom: 20.0),
+                            left: 15.0, top: 30.0, bottom: 20.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.black,
-                            ),
-                            borderRadius: BorderRadius.circular(10.0),
+                            color: Colors.brown[50],
+                            border: Border.all(color: Colors.transparent),
+                            borderRadius: BorderRadius.circular(10),
                           ),
                           height: 250,
                           width: 180,
@@ -310,7 +309,7 @@ class Home extends StatelessWidget {
                                             ),
                                           ),
                                           const Text(
-                                            "3.990€",
+                                            "3.99€",
                                             style: TextStyle(
                                                 fontSize: 30.0,
                                                 color: Colors.black),
@@ -326,7 +325,9 @@ class Home extends StatelessWidget {
                                                 .collection('sepet');
                                         favouriteRef.add({
                                           'name': 'Orange',
-                                          'price': '3.99'
+                                          'price': '3.99',
+                                          'image':
+                                              'https://firebasestorage.googleapis.com/v0/b/mobil-projem.appspot.com/o/image%2Forange.jpg?alt=media&token=df00e6d4-a51a-4768-828a-bece075e3806'
                                         }).then(
                                           (value) => Navigator.push(
                                             context,
@@ -348,12 +349,11 @@ class Home extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        left: 25.0, top: 30.0, bottom: 20.0, right: 10.0),
+                        left: 15.0, top: 30.0, bottom: 20.0, right: 15.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.black,
-                        ),
+                        color: Colors.brown[50],
+                        border: Border.all(color: Colors.transparent),
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       height: 250,
@@ -470,12 +470,11 @@ class Home extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 10.0, top: 30.0, bottom: 20.0),
+                            left: 15.0, top: 30.0, bottom: 20.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.black,
-                            ),
+                            color: Colors.brown[50],
+                            border: Border.all(color: Colors.transparent),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           height: 250,
@@ -594,12 +593,11 @@ class Home extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 25.0, top: 30.0, bottom: 20.0, right: 10.0),
+                            left: 15.0, top: 30.0, bottom: 20.0, right: 15.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.black,
-                            ),
+                            color: Colors.brown[50],
+                            border: Border.all(color: Colors.transparent),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           height: 250,

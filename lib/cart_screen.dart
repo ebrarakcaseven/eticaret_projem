@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:proje/nav.dart';
 import 'package:proje/state/status_service.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);
@@ -48,9 +49,8 @@ class _CartState extends State<Cart> {
           ),
         ),
       ),
-
-      /* StreamBuilder<QuerySnapshot>(
-          stream: _statusService.getStatus2(),
+      body: StreamBuilder<QuerySnapshot>(
+          stream: _statusService.getSepet(),
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
               return const Text(
@@ -69,24 +69,44 @@ class _CartState extends State<Cart> {
                               color: Colors.brown[100],
                               border: Border.all(color: Colors.black),
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10))),
+                                  const BorderRadius.all(Radius.circular(10))),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Column(
+                            child: Row(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text("${mypost['name']}",
-                                      style: const TextStyle(fontSize: 18)),
+                                Center(
+                                  child: CircleAvatar(
+                                    backgroundImage: mypost['image'] == ""
+                                        ? const NetworkImage(
+                                            "https://www.gentas.com.tr/wp-content/uploads/2021/05/3190-siyah_renk_g483_1250x1000_t3cksofn.jpg")
+                                        : NetworkImage(mypost['image']),
+                                    radius: size.height * 0.08,
+                                  ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Text("${mypost['price']}",
-                                      style: const TextStyle(fontSize: 18)),
+                                  padding: const EdgeInsets.only(
+                                      top: 10.0, left: 40.0),
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text("${mypost['name']}",
+                                            style:
+                                                const TextStyle(fontSize: 22)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Text("${mypost['price']}",
+                                            style:
+                                                const TextStyle(fontSize: 22)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 95.0),
+                                  child: InkWell(child: Icon(Icons.delete)),
+                                )
                               ],
                             ),
                           ),
@@ -95,7 +115,7 @@ class _CartState extends State<Cart> {
                     );
                   });
             }
-          }),*/
+          }),
     );
   }
 }
