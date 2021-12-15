@@ -25,7 +25,8 @@ class Home extends StatelessWidget {
             shape: const CircleBorder(),
           ),
         ),
-        title: Center(
+        title: Padding(
+          padding: const EdgeInsets.only(left: 75.0),
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(
@@ -33,7 +34,7 @@ class Home extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(15.0),
             ),
-            child: Text(
+            child: const Text(
               "  id8 Shop  ",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -46,12 +47,13 @@ class Home extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
+        // ignore: avoid_unnecessary_containers
         child: Container(
           child: Column(
             children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+                children: const [
                   Text(
                     "Find everything",
                     textAlign: TextAlign.center,
@@ -61,23 +63,16 @@ class Home extends StatelessWidget {
                       fontSize: 30,
                     ),
                   ),
-                  Text(
-                    "right to your door",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
-                      fontSize: 30,
-                    ),
-                  ),
-                  Text(
-                    "                      ",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
-                      //backgroundColor: Colors.green,
-                      fontSize: 25,
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 30.0),
+                    child: Text(
+                      "right to your door",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green,
+                        fontSize: 30,
+                      ),
                     ),
                   ),
                 ],
@@ -94,26 +89,23 @@ class Home extends StatelessWidget {
                         ),
                         elevation: 2.0,
                         fillColor: Colors.green,
-                        child: Icon(Icons.search),
-                        padding: EdgeInsets.all(5.0),
-                        shape: CircleBorder(),
+                        child: const Icon(Icons.search),
+                        padding: const EdgeInsets.all(5.0),
+                        shape: const CircleBorder(),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.green,
-                            ),
-                            borderRadius: BorderRadius.circular(15.0),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.green,
                           ),
-                          child: Text(
-                            "  Search  ",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.green,
-                              fontSize: 20,
-                            ),
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: const Text(
+                          "  Search  ",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                            fontSize: 20,
                           ),
                         ),
                       ),
@@ -125,9 +117,9 @@ class Home extends StatelessWidget {
                         onPressed: () {},
                         elevation: 2.0,
                         fillColor: Colors.green,
-                        child: Icon(Icons.room),
-                        padding: EdgeInsets.all(5.0),
-                        shape: CircleBorder(),
+                        child: const Icon(Icons.room),
+                        padding: const EdgeInsets.all(5.0),
+                        shape: const CircleBorder(),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 0, right: 30.0),
@@ -138,7 +130,7 @@ class Home extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          child: Text(
+                          child: const Text(
                             "  Dhaka  ",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -164,7 +156,7 @@ class Home extends StatelessWidget {
                   height: 120,
                   width: 250,
                   //color: Colors.black,
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Buy 100€ and get 10€ off",
                       style: TextStyle(
@@ -182,7 +174,7 @@ class Home extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Popular product",
                       //textAlign: TextAlign.center,
                       style: TextStyle(
@@ -196,7 +188,7 @@ class Home extends StatelessWidget {
                         context,
                         MaterialPageRoute(builder: (context) => Product()),
                       ),
-                      child: Text(
+                      child: const Text(
                         "see all",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -229,17 +221,21 @@ class Home extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 5.0),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 0),
+                                  // ignore: deprecated_member_use
                                   child: FlatButton(
                                     child: Row(
-                                      children: [Icon(Icons.favorite_border)],
+                                      children: const [
+                                        Icon(Icons.favorite_border)
+                                      ],
                                     ),
                                     onPressed: () {
+                                      // ignore: unused_local_variable
                                       FirebaseFirestore firestore =
                                           FirebaseFirestore.instance;
                                       CollectionReference favouriteRef =
@@ -270,7 +266,7 @@ class Home extends StatelessWidget {
                                     fontSize: 20,
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 1 kilogram",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -287,6 +283,7 @@ class Home extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -303,7 +300,7 @@ class Home extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -312,7 +309,7 @@ class Home extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Text(
+                                          const Text(
                                             "3.990€",
                                             style: TextStyle(
                                                 fontSize: 30.0,
@@ -321,6 +318,7 @@ class Home extends StatelessWidget {
                                         ],
                                       ),
                                       onPressed: () {
+                                        // ignore: unused_local_variable
                                         FirebaseFirestore firestore =
                                             FirebaseFirestore.instance;
                                         CollectionReference favouriteRef =
@@ -333,7 +331,8 @@ class Home extends StatelessWidget {
                                           (value) => Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) => Cart()),
+                                                builder: (context) =>
+                                                    const Cart()),
                                           ),
                                         );
                                       },
@@ -364,11 +363,13 @@ class Home extends StatelessWidget {
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(top: 0),
+                              // ignore: deprecated_member_use
                               child: FlatButton(
                                 child: Row(
-                                  children: [Icon(Icons.favorite_border)],
+                                  children: const [Icon(Icons.favorite_border)],
                                 ),
                                 onPressed: () {
+                                  // ignore: unused_local_variable
                                   FirebaseFirestore firestore =
                                       FirebaseFirestore.instance;
                                   CollectionReference favouriteRef =
@@ -399,7 +400,7 @@ class Home extends StatelessWidget {
                                 fontSize: 20,
                               ),
                             ),
-                            Text(
+                            const Text(
                               "Weight 500 gram",
                               style: TextStyle(
                                 color: Colors.black,
@@ -416,6 +417,7 @@ class Home extends StatelessWidget {
                                   ),
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),
+                                // ignore: deprecated_member_use
                                 child: FlatButton(
                                   child: Row(
                                     children: [
@@ -430,7 +432,7 @@ class Home extends StatelessWidget {
                                             borderRadius:
                                                 BorderRadius.circular(20.0),
                                           ),
-                                          child: Text(
+                                          child: const Text(
                                             "+",
                                             style: TextStyle(
                                               fontSize: 35.0,
@@ -439,9 +441,8 @@ class Home extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 8.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(left: 8.0),
                                         child: Text(
                                           "5.99€",
                                           style: TextStyle(
@@ -488,11 +489,15 @@ class Home extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 0),
+                                  // ignore: deprecated_member_use
                                   child: FlatButton(
                                     child: Row(
-                                      children: [Icon(Icons.favorite_border)],
+                                      children: const [
+                                        Icon(Icons.favorite_border)
+                                      ],
                                     ),
                                     onPressed: () {
+                                      // ignore: unused_local_variable
                                       FirebaseFirestore firestore =
                                           FirebaseFirestore.instance;
                                       CollectionReference favouriteRef =
@@ -540,6 +545,7 @@ class Home extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -556,7 +562,7 @@ class Home extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -565,7 +571,7 @@ class Home extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Text(
+                                          const Text(
                                             "5.99€",
                                             style: TextStyle(
                                                 fontSize: 30.0,
@@ -601,17 +607,21 @@ class Home extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 6.0),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 0),
+                                  // ignore: deprecated_member_use
                                   child: FlatButton(
                                     child: Row(
-                                      children: [Icon(Icons.favorite_border)],
+                                      children: const [
+                                        Icon(Icons.favorite_border)
+                                      ],
                                     ),
                                     onPressed: () {
+                                      // ignore: unused_local_variable
                                       FirebaseFirestore firestore =
                                           FirebaseFirestore.instance;
                                       CollectionReference favouriteRef =
@@ -626,17 +636,16 @@ class Home extends StatelessWidget {
                                     },
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 0, bottom: 3.0),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 0, bottom: 3.0),
                                   child: Image(
                                     image: NetworkImage(
                                         'https://wwwi.globalpiyasa.com/lib/Urun/670/af0e3fb03a2ea9ee169352bc35efb933_1.jpg'),
                                     width: 105,
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 0),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 0),
                                   child: Text(
                                     "pineapple",
                                     style: TextStyle(
@@ -646,7 +655,7 @@ class Home extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 900 gram",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -663,6 +672,7 @@ class Home extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -679,7 +689,7 @@ class Home extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -688,7 +698,7 @@ class Home extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Text(
+                                          const Text(
                                             "5.99€",
                                             style: TextStyle(
                                                 fontSize: 30.0,

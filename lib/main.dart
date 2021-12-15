@@ -7,6 +7,7 @@ void main() async {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp();
   } catch (e) {
+    // ignore: avoid_print
     print('failed to initialize');
   }
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.brown[100],
       ),
-      home: Nav(),
+      home: const Nav(),
     );
   }
 }

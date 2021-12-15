@@ -6,15 +6,21 @@ import 'package:proje/cart_screen.dart';
 import 'package:proje/favourite_screen.dart';
 import 'package:proje/nav.dart';
 
+// ignore: must_be_immutable
 class Search extends StatelessWidget {
+  // ignore: prefer_final_fields, unused_field
   int _selectedIndex = 0;
+  // ignore: prefer_final_fields, unused_field
   List<Widget> _widgetOptions = <Widget>[
-    Home(),
-    Categories(),
-    Favourite(),
-    Cart(),
+    const Home(),
+    const Categories(),
+    const Favourite(),
+    const Cart(),
   ];
+  // ignore: prefer_final_fields, unused_field
   bool _hasBeenPressed = false;
+
+  Search({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,26 +32,25 @@ class Search extends StatelessWidget {
           child: RawMaterialButton(
             onPressed: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Nav()),
+              MaterialPageRoute(builder: (context) => const Nav()),
             ),
             elevation: 2.0,
             fillColor: Colors.green,
-            child: Icon(Icons.keyboard_arrow_left),
-            padding: EdgeInsets.all(5.0),
-            shape: CircleBorder(),
+            child: const Icon(Icons.keyboard_arrow_left),
+            padding: const EdgeInsets.all(5.0),
+            shape: const CircleBorder(),
           ),
         ),
       ),
       body: SingleChildScrollView(
         child: Container(
-          //  padding: new EdgeInsets.symmetric(vertical: 6.0, horizontal: 6.0),
-          margin: EdgeInsets.symmetric(vertical: 6.0),
+          margin: const EdgeInsets.symmetric(vertical: 6.0),
           child: Column(
             children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Center(
+                  const Center(
                     child: Text(
                       "Search",
                       textAlign: TextAlign.center,
@@ -63,9 +68,9 @@ class Search extends StatelessWidget {
                         border: Border.all(
                           color: Colors.green,
                         ),
-                        borderRadius: BorderRadius.circular(15.0),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
-                      child: TextField(
+                      child: const TextField(
                         decoration: InputDecoration(
                           hintText: "Search your product",
                           prefixIcon: Icon(

@@ -11,6 +11,18 @@ class Categories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Padding(
+          padding: EdgeInsets.only(left: 65.0),
+          child: Text(
+            "Categories",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.green,
+              fontSize: 30,
+            ),
+          ),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Padding(
@@ -34,19 +46,8 @@ class Categories extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: const Text(
-                      "Categories",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.green,
-                        fontSize: 30,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                    padding: const EdgeInsets.only(
+                        left: 30.0, right: 30.0, top: 30.0),
                     child: Container(
                       decoration: BoxDecoration(
                         border: Border.all(
@@ -135,8 +136,8 @@ class Categories extends StatelessWidget {
                                         builder: (context) =>
                                             const Vegatable()),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(10.0),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(10.0),
                                     child: Text(
                                       "Vegatables & Fruits",
                                       style: TextStyle(
@@ -248,8 +249,8 @@ class Categories extends StatelessWidget {
                           //color: Colors.black,
                           child: Center(
                             child: Column(
-                              children: [
-                                const Padding(
+                              children: const <Widget>[
+                                Padding(
                                   padding: EdgeInsets.only(top: 30.0),
                                   child: Image(
                                     image: NetworkImage(
@@ -258,7 +259,7 @@ class Categories extends StatelessWidget {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: EdgeInsets.all(10.0),
                                   child: Text(
                                     "Cooking",
                                     style: TextStyle(
@@ -294,9 +295,9 @@ class Categories extends StatelessWidget {
                           // color: Colors.black,
                           child: Center(
                             child: Column(
-                              children: [
+                              children: const <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(
+                                  padding: EdgeInsets.only(
                                       top: 20, left: 2.0, right: 2.0),
                                   child: Image(
                                     image: NetworkImage(
@@ -305,7 +306,7 @@ class Categories extends StatelessWidget {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: EdgeInsets.all(10.0),
                                   child: Text(
                                     "Meat & Fish",
                                     style: TextStyle(

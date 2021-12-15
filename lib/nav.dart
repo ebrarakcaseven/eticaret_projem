@@ -5,17 +5,20 @@ import 'package:proje/cart_screen.dart';
 import 'package:proje/categories_screen.dart';
 
 class Nav extends StatefulWidget {
+  const Nav({Key? key}) : super(key: key);
+
   @override
   _NavState createState() => _NavState();
 }
 
 class _NavState extends State<Nav> {
   int _selectedIndex = 0;
+  // ignore: prefer_final_fields
   List<Widget> _widgetOptions = <Widget>[
-    Home(),
-    Categories(),
-    Favourite(),
-    Cart(),
+    const Home(),
+    const Categories(),
+    const Favourite(),
+    const Cart(),
   ];
 
   void _onItemTap(int index) {
@@ -37,6 +40,7 @@ class _NavState extends State<Nav> {
               Icons.home,
               color: Colors.black,
             ),
+            // ignore: deprecated_member_use
             title: Text(
               'Home',
               style: TextStyle(
@@ -49,6 +53,7 @@ class _NavState extends State<Nav> {
               Icons.local_mall,
               color: Colors.black,
             ),
+            // ignore: deprecated_member_use
             title: Text(
               'Categories',
               style: TextStyle(
@@ -61,6 +66,7 @@ class _NavState extends State<Nav> {
               Icons.favorite,
               color: Colors.black,
             ),
+            // ignore: deprecated_member_use
             title: Text(
               'Favourite',
               style: TextStyle(
@@ -73,6 +79,7 @@ class _NavState extends State<Nav> {
               Icons.shopping_cart,
               color: Colors.black,
             ),
+            // ignore: deprecated_member_use
             title: Text(
               'Cart',
               style: TextStyle(

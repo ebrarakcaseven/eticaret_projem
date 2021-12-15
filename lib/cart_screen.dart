@@ -11,12 +11,26 @@ class Cart extends StatefulWidget {
 }
 
 class _CartState extends State<Cart> {
+  // ignore: prefer_final_fields, unused_field
   StatusService _statusService = StatusService();
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        title: const Padding(
+          padding: EdgeInsets.only(left: 100.0),
+          child: Text(
+            "CART",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.green,
+              fontSize: 30,
+            ),
+          ),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Padding(
@@ -24,7 +38,7 @@ class _CartState extends State<Cart> {
           child: RawMaterialButton(
             onPressed: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Nav()),
+              MaterialPageRoute(builder: (context) => const Nav()),
             ),
             elevation: 2.0,
             fillColor: Colors.green,
@@ -34,23 +48,7 @@ class _CartState extends State<Cart> {
           ),
         ),
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              "CART",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.green,
-                fontSize: 30,
-              ),
-            ),
-          ),
-        ],
-      ),
+
       /* StreamBuilder<QuerySnapshot>(
           stream: _statusService.getStatus2(),
           builder: (context, snapshot) {

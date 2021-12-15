@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:proje/nav.dart';
 
+// ignore: must_be_immutable
 class Dairy extends StatelessWidget {
+  // ignore: prefer_final_fields, unused_field
   bool _hasBeenPressed = false;
+
+  Dairy({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +18,7 @@ class Dairy extends StatelessWidget {
           child: RawMaterialButton(
             onPressed: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Nav()),
+              MaterialPageRoute(builder: (context) => const Nav()),
             ),
             elevation: 2.0,
             fillColor: Colors.green,
@@ -32,7 +36,7 @@ class Dairy extends StatelessWidget {
             children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+                children: const <Widget>[
                   Text(
                     "Dairy",
                     textAlign: TextAlign.center,
@@ -65,7 +69,7 @@ class Dairy extends StatelessWidget {
                     ),
                     borderRadius: BorderRadius.circular(30.0),
                   ),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration(
                       hintText: "Search your product",
                       prefixIcon: Icon(
@@ -98,8 +102,8 @@ class Dairy extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 20.0),
                                   /* child: Image(
                                     image: NetworkImage(
@@ -107,7 +111,7 @@ class Dairy extends StatelessWidget {
                                     width: 140,
                                   ),*/
                                 ),
-                                Text(
+                                const Text(
                                   "Milk",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -116,7 +120,7 @@ class Dairy extends StatelessWidget {
                                     fontSize: 20,
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 1 kilogram",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -134,6 +138,7 @@ class Dairy extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -150,7 +155,7 @@ class Dairy extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -159,7 +164,7 @@ class Dairy extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Text(
+                                          const Text(
                                             "3.990€",
                                             style: TextStyle(
                                                 fontSize: 30.0,
@@ -199,8 +204,8 @@ class Dairy extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 18.0),
                                   /* child: Image(
                                     image: NetworkImage(
@@ -208,7 +213,7 @@ class Dairy extends StatelessWidget {
                                     width: 150,
                                   ),*/
                                 ),
-                                Text(
+                                const Text(
                                   "Yoghurt",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -217,7 +222,7 @@ class Dairy extends StatelessWidget {
                                     fontSize: 20,
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 500 gram",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -235,6 +240,7 @@ class Dairy extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -251,7 +257,7 @@ class Dairy extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -260,9 +266,8 @@ class Dairy extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 8.0),
+                                          const Padding(
+                                            padding: EdgeInsets.only(left: 8.0),
                                             child: Text(
                                               "5.00€",
                                               style: TextStyle(
@@ -308,8 +313,8 @@ class Dairy extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 20.0),
                                   /* child: Image(
                                     image: NetworkImage(
@@ -317,8 +322,8 @@ class Dairy extends StatelessWidget {
                                     width: 100,
                                   ),*/
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 15.0),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 15.0),
                                   child: Text(
                                     "Eggs",
                                     style: TextStyle(
@@ -329,7 +334,7 @@ class Dairy extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 100 gram",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -347,6 +352,7 @@ class Dairy extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -363,7 +369,7 @@ class Dairy extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -372,7 +378,7 @@ class Dairy extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Text(
+                                          const Text(
                                             "5.00€",
                                             style: TextStyle(
                                                 fontSize: 30.0,
@@ -411,8 +417,8 @@ class Dairy extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 20.0),
                                   /* child: Image(
                                     image: NetworkImage(
@@ -420,7 +426,7 @@ class Dairy extends StatelessWidget {
                                     width: 110,
                                   ),*/
                                 ),
-                                Text(
+                                const Text(
                                   "cheese",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -429,7 +435,7 @@ class Dairy extends StatelessWidget {
                                     fontSize: 20,
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 900 gram",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -447,6 +453,7 @@ class Dairy extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -463,7 +470,7 @@ class Dairy extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -472,7 +479,7 @@ class Dairy extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Text(
+                                          const Text(
                                             "5.00€",
                                             style: TextStyle(
                                                 fontSize: 30.0,
@@ -517,8 +524,8 @@ class Dairy extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 15.0),
                                   /* child: Image(
                                     image: NetworkImage(
@@ -526,8 +533,8 @@ class Dairy extends StatelessWidget {
                                     width: 100,
                                   ),*/
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 20.0),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 20.0),
                                   child: Text(
                                     "Apple",
                                     style: TextStyle(
@@ -538,7 +545,7 @@ class Dairy extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 1 kilogram",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -556,6 +563,7 @@ class Dairy extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -572,7 +580,7 @@ class Dairy extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -581,7 +589,7 @@ class Dairy extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Text(
+                                          const Text(
                                             "3.990€",
                                             style: TextStyle(
                                                 fontSize: 30.0,
@@ -621,8 +629,8 @@ class Dairy extends StatelessWidget {
                           child: Center(
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 2.0, right: 2.0, top: 15.0),
                                   /*  child: Image(
                                     image: NetworkImage(
@@ -630,8 +638,8 @@ class Dairy extends StatelessWidget {
                                     width: 100,
                                   ),*/
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 20.0),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 20.0),
                                   child: Text(
                                     "flour",
                                     style: TextStyle(
@@ -642,7 +650,7 @@ class Dairy extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Weight 500 gram",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -660,6 +668,7 @@ class Dairy extends StatelessWidget {
                                       ),
                                       borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    // ignore: deprecated_member_use
                                     child: FlatButton(
                                       child: Row(
                                         children: [
@@ -676,7 +685,7 @@ class Dairy extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
-                                              child: Text(
+                                              child: const Text(
                                                 "+",
                                                 style: TextStyle(
                                                   fontSize: 35.0,
@@ -685,9 +694,8 @@ class Dairy extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 8.0),
+                                          const Padding(
+                                            padding: EdgeInsets.only(left: 8.0),
                                             child: Text(
                                               "5.00€",
                                               style: TextStyle(
