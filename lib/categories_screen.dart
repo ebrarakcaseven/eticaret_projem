@@ -107,50 +107,48 @@ class Categories extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 10.0, top: 30.0, bottom: 20.0),
+                            left: 10.0, top: 25.0, bottom: 20.0),
                         child: Container(
                           decoration: BoxDecoration(
+                            color: Colors.brown[50],
                             border: Border.all(
-                              color: Colors.black,
+                              color: Colors.transparent,
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 190,
+                          height: 230,
                           width: 180,
                           //color: Colors.black,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                const Padding(
-                                  padding: EdgeInsets.only(top: 20.0),
-                                  child: Image(
-                                    image: NetworkImage(
-                                        'https://www.bestfreshfruits.com/wp-content/uploads/2015/09/frutas_7.png'),
-                                    width: 100,
-                                  ),
+                          child: Column(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.only(top: 55.0),
+                                child: Image(
+                                  image: NetworkImage(
+                                      'https://www.bestfreshfruits.com/wp-content/uploads/2015/09/frutas_7.png'),
+                                  width: 100,
                                 ),
-                                InkWell(
-                                  onTap: () => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const Vegatable()),
-                                  ),
-                                  child: const Padding(
-                                    padding: EdgeInsets.all(10.0),
-                                    child: Text(
-                                      "Vegatables & Fruits",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        //backgroundColor: Colors.black,
-                                        fontSize: 18,
-                                      ),
+                              ),
+                              InkWell(
+                                onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Vegatable()),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Text(
+                                    "Vegatables & Fruits",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      //backgroundColor: Colors.black,
+                                      fontSize: 18,
                                     ),
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -160,50 +158,49 @@ class Categories extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 0, top: 30.0, bottom: 20.0, right: 10.0),
+                            left: 0, top: 25.0, bottom: 20.0, right: 10.0),
                         child: Container(
                           decoration: BoxDecoration(
+                            color: Colors.brown[50],
                             border: Border.all(
-                              color: Colors.black,
+                              color: Colors.transparent,
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 190,
+                          height: 230,
                           width: 180,
                           // color: Colors.black,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                const Padding(
-                                  padding: EdgeInsets.only(
-                                      top: 20.0, left: 20.0, right: 20.0),
-                                  child: Image(
-                                    image: NetworkImage(
-                                        'https://media.mehrnews.com/d/2020/02/04/4/3371550.jpg'),
-                                    width: 150,
-                                  ),
+                          child: Column(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.only(
+                                    top: 55.0, left: 20.0, right: 20.0),
+                                child: Image(
+                                  image: NetworkImage(
+                                      'https://media.mehrnews.com/d/2020/02/04/4/3371550.jpg'),
+                                  width: 150,
                                 ),
-                                InkWell(
-                                  onTap: () => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Dairy()),
-                                  ),
-                                  child: const Padding(
-                                    padding: EdgeInsets.all(10.0),
-                                    child: Text(
-                                      "Dairy",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        //backgroundColor: Colors.black,
-                                        fontSize: 18,
-                                      ),
+                              ),
+                              InkWell(
+                                onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Dairy()),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Text(
+                                    "Dairy",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      //backgroundColor: Colors.black,
+                                      fontSize: 18,
                                     ),
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -239,39 +236,38 @@ class Categories extends StatelessWidget {
                             left: 10.0, top: 30.0, bottom: 20.0),
                         child: Container(
                           decoration: BoxDecoration(
+                            color: Colors.brown[50],
                             border: Border.all(
-                              color: Colors.black,
+                              color: Colors.transparent,
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 190,
+                          height: 230,
                           width: 180,
                           //color: Colors.black,
-                          child: Center(
-                            child: Column(
-                              children: const <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.only(top: 30.0),
-                                  child: Image(
-                                    image: NetworkImage(
-                                        'https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/29/16/vegetarian-cookbooks.jpg?width=982&height=726&auto=webp&quality=75'),
-                                    width: 100,
+                          child: Column(
+                            children: const <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(top: 55.0),
+                                child: Image(
+                                  image: NetworkImage(
+                                      'https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/29/16/vegetarian-cookbooks.jpg?width=982&height=726&auto=webp&quality=75'),
+                                  width: 100,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: Text(
+                                  "Cooking",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    //backgroundColor: Colors.black,
+                                    fontSize: 18,
                                   ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.all(10.0),
-                                  child: Text(
-                                    "Cooking",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                      //backgroundColor: Colors.black,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -285,40 +281,39 @@ class Categories extends StatelessWidget {
                             left: 0, top: 30.0, bottom: 20.0, right: 10.0),
                         child: Container(
                           decoration: BoxDecoration(
+                            color: Colors.brown[50],
                             border: Border.all(
-                              color: Colors.black,
+                              color: Colors.transparent,
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          height: 190,
+                          height: 230,
                           width: 180,
                           // color: Colors.black,
-                          child: Center(
-                            child: Column(
-                              children: const <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                      top: 20, left: 2.0, right: 2.0),
-                                  child: Image(
-                                    image: NetworkImage(
-                                        'https://st2.depositphotos.com/1001069/12106/i/600/depositphotos_121063832-stock-photo-sausages-fish-and-meat-cooking.jpg'),
-                                    width: 120,
+                          child: Column(
+                            children: const <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: 55, left: 2.0, right: 2.0),
+                                child: Image(
+                                  image: NetworkImage(
+                                      'https://st2.depositphotos.com/1001069/12106/i/600/depositphotos_121063832-stock-photo-sausages-fish-and-meat-cooking.jpg'),
+                                  width: 120,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: Text(
+                                  "Meat & Fish",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    //backgroundColor: Colors.black,
+                                    fontSize: 18,
                                   ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.all(10.0),
-                                  child: Text(
-                                    "Meat & Fish",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                      //backgroundColor: Colors.black,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),

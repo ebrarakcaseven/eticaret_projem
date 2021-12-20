@@ -61,54 +61,51 @@ class _CartState extends State<Cart> {
                   itemCount: snapshot.data?.docs.length,
                   itemBuilder: (context, index) {
                     DocumentSnapshot mypost = snapshot.data!.docs[index];
+
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: InkWell(
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Colors.brown[100],
-                              border: Border.all(color: Colors.black),
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(10))),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Center(
-                                  child: CircleAvatar(
-                                    backgroundImage: mypost['image'] == ""
-                                        ? const NetworkImage(
-                                            "https://www.gentas.com.tr/wp-content/uploads/2021/05/3190-siyah_renk_g483_1250x1000_t3cksofn.jpg")
-                                        : NetworkImage(mypost['image']),
-                                    radius: size.height * 0.08,
-                                  ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.brown[50],
+                            border: Border.all(color: Colors.transparent),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(10))),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.only(left: 0, right: 15.0),
+                                child: InkWell(child: Icon(Icons.delete)),
+                              ),
+                              Center(
+                                child: CircleAvatar(
+                                  backgroundImage: mypost['image'] == ""
+                                      ? const NetworkImage(
+                                          "https://www.gentas.com.tr/wp-content/uploads/2021/05/3190-siyah_renk_g483_1250x1000_t3cksofn.jpg")
+                                      : NetworkImage(mypost['image']),
+                                  radius: size.height * 0.08,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 10.0, left: 40.0),
-                                  child: Column(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text("${mypost['name']}",
-                                            style:
-                                                const TextStyle(fontSize: 22)),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Text("${mypost['price']}",
-                                            style:
-                                                const TextStyle(fontSize: 22)),
-                                      ),
-                                    ],
-                                  ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 10.0, left: 40.0),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text("${mypost['name']}",
+                                          style: const TextStyle(fontSize: 22)),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: Text("${mypost['price']}",
+                                          style: const TextStyle(fontSize: 22)),
+                                    ),
+                                  ],
                                 ),
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 95.0),
-                                  child: InkWell(child: Icon(Icons.delete)),
-                                )
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
